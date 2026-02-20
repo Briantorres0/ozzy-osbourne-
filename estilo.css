@@ -1,0 +1,206 @@
+body {
+  font-family: 'Inter', sans-serif; 
+  background-color: #f0f4f8; 
+  color: #333; 
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #2c3e50; 
+  color: #ecf0f1; 
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+
+header > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0; 
+}
+
+
+
+button.menu-hamburguesa {
+  display: block; /* Visible por defecto en móvil */
+  color: #ecf0f1;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  outline: none; /* Elimina el contorno al hacer focus */
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+
+/* Menú de navegación (oculto por defecto en móvil) */
+nav {
+  display: none;
+  flex-direction: column;
+  width: 30%; 
+  position: absolute; 
+  top: 60px; 
+  right: 0;
+  background-color: #2c3e50; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 999;
+  border-radius: 0 0 0.75rem 0.75rem;
+  overflow: hidden; 
+}
+
+nav.nav-open {
+  display: flex; 
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+nav li {
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+nav a:hover, nav a:focus {
+  background-color: #2980b9; 
+  border-radius: 0.5rem;
+}
+
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+section {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2980b9; 
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.25rem; 
+  font-weight: 500;
+  color: #020e16;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #555; 
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+  margin: 1rem auto;
+}
+
+a {
+  color: #3498db; 
+  text-decoration: none;
+}
+
+
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  color: #ecf0f1;
+}
+
+.curiosidades {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  button.menu-hamburguesa {
+    display: none; /* Oculta el botón en pantallas más grandes */
+  }
+
+  nav {
+    display: flex !important; /* Muestra el menú siempre en pantallas grandes */
+    position: static;
+    flex-direction: row;
+    width: auto;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav li {
+    margin: 0 1rem;
+    width: auto;
+  }
+
+  nav a {
+    padding: 0.5rem 0;
+    color: #ecf0f1;
+    width: auto;
+ 
+  }
+
+  nav a:hover, nav a:focus {
+    background-color: #2980b9;
+    border-radius: auto;
+    text-decoration: none;
+  }
+}

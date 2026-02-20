@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo-tabla.css">
+</head>
+<body>
+  <header>
+    <div>
+      <button class="menu-hamburguesa"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+       &#9776; <!-- Icono de hamburguesa -->
+      </button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="biografia.html">Biografia</a></li>
+          <li><a href="discografia.html">Discografia</a></li>
+          <li><a href="curiosidades.html">Curiosidades</a></li>
+          <li><a href="tabla.html">Inscripcion</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    
+    <section>
+        <h2>Albumes Solistas</h2>
+        <form id="data-form">
+            <label  for="item-titulo">Titulo de Album</label>
+            <input type="text" id="item-titulo" placeholder="Ej. Blizzard of Ozz" required>
+
+            <label for="item-año">Año de Lanzamiento</label>
+            <input type="number" id="item-año" placeholder="Ej. 1980" required>
+
+            <label for="item-mejor-cancion">Mejor Cancion</label>
+            <input type="text" id="item-mejor-cancion" placeholder="Ej. Crazy Train" required>
+            <button type="submit" id="add-item-btn" class="add-btn">
+              Agregar Album
+            </button>
+            <button type="submit" id="update-item-btn" class="update-btn">
+              Actualizar Album
+            </button>
+            <button type="reset" class="cancel-btn">
+              Cancelar
+            </button>
+          </form>
+          <div id="status-message" class="hidden">Mensaje a mostrar</div>
+    </section>
+    
+    <section>
+        <h2>Lista de Albumes</h2>
+        <div class="table-container">
+          <table id="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Titulo</th>
+                    <th>Año</th>
+                    <th>Mejor Cancion</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Filas de datos se insertarán aquí dinámicamente -->
+            </tbody>
+          </table>
+        </div>
+    </section>
+  </main>
+  <div id="confirmation-modal" class="modal">
+    <div class="modal-content">
+        <h3>Confirmar Eliminación</h3>
+        <p>¿Estás seguro de que deseas eliminar este elemento?</p>
+        <div class="modal-buttons">
+            <button class="confirm-btn">Sí, Eliminar</button>
+            <button class="cancel-btn">Cancelar</button>
+        </div>
+    </div>
+</div>
+    <footer>
+        <div>
+        <p>&copy; 2025 Brian Torres. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="menu.js"></script>
+    <script src="tabla.js"></script>
+</body>
+</html>
